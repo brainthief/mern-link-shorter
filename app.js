@@ -1,8 +1,23 @@
 const express = require('express')
-const confirm = require('config')
+const config = require('config')
+const mongoose = require('mongoose')
 
 const app = express()
 
-const PORT = confirm.get('port') || 5000
+const PORT = config.get('port') || 5000
 
-app.listen(PORT, () => console.log(`App has been started... ${PORT}`))
+async function start() {
+ try {
+  await mongoose.connect(config.get('mongoUrl'), {
+   useNewUrlParser: true,
+   useUnifiedTopology: true
+  })
+  app.listen(PORT, () => console.log(`App has been started... ${PORT}`))
+ } catch (e) {
+  console.log('Server error', e.message)
+  process.exit(1)
+ }
+}
+
+start()
+
