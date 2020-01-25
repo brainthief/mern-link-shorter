@@ -1,0 +1,28 @@
+{
+  "name": "mern-links",
+  "version": "1.0.0",
+  "description": "Mern links creator",
+  "main": "app.js",
+  "scripts": {
+    "script": "node app.js",
+    "server": "nodemon app.js"
+  },
+  "keywords": [
+    "links",
+    "mern",
+    "react",
+    "mongodb",
+    "express",
+    "nodejs"
+  ],
+  "author": "Vytautas Vasiliauskas <vasiliauskasvytukas@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.0.2",
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.8.9"
+  }
+}
