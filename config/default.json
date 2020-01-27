@@ -1,4 +1,5 @@
 {
  "port": 5000,
+ "jwtSecretKey": "mern mern mern mern",
  "mongoUrl": "mongodb+srv://vytautasSS:EeKDp0BPEdlz8ggG@lithuania-djjam.mongodb.net/test?retryWrites=true&w=majority"
 }
