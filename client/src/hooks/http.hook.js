@@ -14,10 +14,11 @@ export const useHttp = () => {
           throw new Error(data.message || "Something wrong");
         }
         setLoading(false);
-      } catch (e) {}
-      setLoading(false);
-      setError(e.message);
-      throw e;
+      } catch (e) {
+        setLoading(false);
+        setError(e.message);
+        throw e;
+      }
     },
     []
   );
